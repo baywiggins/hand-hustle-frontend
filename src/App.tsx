@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import felt from "./assets/felt.png";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="backgroundWrapper bg-gray-300 h-screen flex items-top justify-center">
+      <div
+        className="background mt-1 bg-green-700 h-90 w-95 border border-black border-25 rounded-large flex items-center justify-center shadow-2xl relative"
+        style={{ backgroundImage: `url(${felt})`, backgroundRepeat: "repeat" }}
+      >
+        <div className="inner-border absolute top-6 left-6 right-6 bottom-6 border-4 border-yellow-500 rounded-large"></div>
+
+        <div className="flop mb-32 m-3 h-40 w-41 border border-white rounded-xl border-2"></div>
+        <div className="turn mb-32 m-3 h-40 w-14 border border-white rounded-xl border-2"></div>
+        <div className="river mb-32 m-3 h-40 w-14 border border-white rounded-xl border-2"></div>
+      </div>
     </div>
   );
 }
